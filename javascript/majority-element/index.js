@@ -14,5 +14,4 @@ function majorityElement (arr) {
   return foundNum
 }
 
-console.log(majorityElement([1, 2, 3, 1, 1]))
 
