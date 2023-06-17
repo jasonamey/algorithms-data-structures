@@ -7,7 +7,6 @@ def tournamentWinner(competitions, results):
         i = 0 if i == 1 else 1
         winner = competitions[i][winnerIdx]
         dd[winner] = dd[winner] + 1
-        print(dd)
     maxWins = 0
     currWinner = ""
     for team in dd:
