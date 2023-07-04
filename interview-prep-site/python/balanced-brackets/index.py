@@ -12,6 +12,3 @@ def balancedBrackets(string):
             if opened.index(test) != closed.index(bracket):
                 return False
     return len(stack) == 0
-
-
-print(balancedBrackets("(([()()){})"))
