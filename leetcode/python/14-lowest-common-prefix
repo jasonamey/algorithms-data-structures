@@ -1,0 +1,20 @@
+def longestCommonPrefix(strs):
+        min = float("Inf")
+        lcp = ''
+        max = len(strs)
+        for i in range(0,max):
+            test = len(strs[i])
+            if test < min:
+               min = len(strs[i])
+               
+        for i in range(0, len(min)):
+            for word in strs:
+                if word == min: pass 
+                if word[i] != min[i]:
+                    return lcp
+            lcp += min[i]
+        return lcp 
+
+l = ["flower","flow","flight"]
+
+print(longestCommonPrefix(l))
