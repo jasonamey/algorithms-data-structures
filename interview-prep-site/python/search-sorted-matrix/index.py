@@ -9,7 +9,7 @@ def searchInSortedMatrix(matrix, target):
         col -= 1
       else: 
         row += 1
-        
+
     return [-1, -1]
 
 matrix = [
@@ -20,6 +20,6 @@ matrix = [
     [99, 100, 103, 106, 128, 1004]
   ]
 
-print(searchInSortedMatrix(matrix, 44))
+assert searchInSortedMatrix(matrix, 44) == [3,3]
          
         
