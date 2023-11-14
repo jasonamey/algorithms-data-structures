@@ -5,7 +5,6 @@ function staircaseTraversal (height, maxSteps) {
 }
 
 function helper (height, maxSteps, numOfVariations) {
-  console.log(height, maxSteps, numOfVariations)
   if (height - maxSteps < 0) {
     return
   }

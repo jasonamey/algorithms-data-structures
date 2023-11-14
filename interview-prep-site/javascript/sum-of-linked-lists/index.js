@@ -23,7 +23,6 @@ function sumOfLinkedLists (linkedListOne, linkedListTwo) {
   exp = 0
   carry = 0
   while (l1 !== undefined && l2 !== undefined) {
-    console.log(l1.value, l2.value, tempTotal, total)
     tempTotal = l1.value + l2.value + carry
     digit = tempTotal % 10
     if (tempTotal > 9) {
@@ -32,7 +31,6 @@ function sumOfLinkedLists (linkedListOne, linkedListTwo) {
       carry = 0
     }
     total += Math.pow(10, exp++) * digit
-    console.log("total ", total)
     l1 = l1.next
     l2 = l2.next
   }
@@ -81,6 +79,5 @@ for (let i = 0; i < SIZE - 1; i++) {
 
 nodes1[0].printList()
 nodes2[0].printList()
-// nodes2[0].printList()
-// console.log(nodes1[0])
+
 sumOfLinkedLists(nodes1[0], nodes2[0])

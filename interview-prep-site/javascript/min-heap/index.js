@@ -42,10 +42,6 @@ let arr = [23, 65, 1, 3, 2, 78, 3, 9, 65]
 shiftUp(arr.length - 1, arr)
 for (let i = arr.length - 1; i >= 0; i--) {
   shiftUp(i, arr)
-  // console.log(arr)
 }
-swap(0, arr.length - 1, arr)
-arr.pop()
-shiftDown(arr)
-console.log(arr)
+
 

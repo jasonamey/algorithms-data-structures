@@ -33,4 +33,3 @@ function sweetAndSavory (dishes, target) {
   return targetDif === Infinity ? [0, 0] : bestPairs
 }
 
-console.log(sweetAndSavory(a, -3))
