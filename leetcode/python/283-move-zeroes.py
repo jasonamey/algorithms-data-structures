@@ -28,11 +28,9 @@ a = [1,0]
 moveZeroes(a)
 assert a == [1,0]
 
-
 a = [0,1]
 moveZeroes(a)
 assert a == [1,0]
-
 
 a = [0,1,0,3,12]
 moveZeroes(a)
