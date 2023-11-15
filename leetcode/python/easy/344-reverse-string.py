@@ -13,7 +13,6 @@ reverseString(str)
 assert str == ["h","a","n","n","a","H"]
 
 def reverseString_recursive(s: list[str]) -> None:
-
   arr_len = len(s)
   if arr_len == 0 or arr_len == 1: 
     return 
@@ -23,15 +22,6 @@ def reverseString_recursive(s: list[str]) -> None:
   if arr_len == 3: 
     print(s)
     
-  
 
-str = ["h","e","l","l","o"]
-reverseString_recursive(str)
-print(str)
-# assert str == ["o","l","l","e","h"]
-
-# str = ["H","a","n","n","a","h"]
-# reverseString(str)
-# assert str == ["h","a","n","n","a","H"]
 
 
