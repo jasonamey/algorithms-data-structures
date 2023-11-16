@@ -19,7 +19,6 @@ def checkRow(idx, board):
     if board[idx][i] != '.':
       num = int(board[idx][i])
       if num in s:
-        print("row")
         return False
       else:
         s.add(num)
@@ -35,7 +34,6 @@ def checkColumn(idx, board):
       else:
         s.add(num)
   return True
-
 
 def checkBox(xStart, xEnd, yStart, yEnd, board):
     s = set()
