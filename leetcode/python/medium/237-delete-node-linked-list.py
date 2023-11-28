@@ -4,15 +4,20 @@ class ListNode:
         self.val = x
         self.next = None
 
+# class Solution:
+#     def deleteNode(self, node):
+#       temp = node
+#       prev = None
+#       while temp.next != None: 
+#         temp.val = temp.next.val
+#         prev = temp
+#         temp = temp.next
+#       prev.next = None
+
 class Solution:
     def deleteNode(self, node):
-      temp = node
-      prev = None
-      while temp.next != None: 
-        temp.val = temp.next.val
-        prev = temp
-        temp = temp.next
-      prev.next = None
+        node.val = node.next.val
+        node.next = node.next.next 
 
 vals = [1,2,3,4,5]
 
