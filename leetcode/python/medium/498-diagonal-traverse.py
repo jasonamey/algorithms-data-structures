@@ -29,12 +29,12 @@ class Solution:
                 else: 
                     y += 1 
                     direction = 'U'
-        return final 
-    
+        return final  
+       
 s = Solution()
 
-mat = [[1,2,3],[4,5,6],[7,8,9]]
-assert s.findDiagonalOrder(mat) == [1,2,4,7,5,3,6,8,9]
+m = [[1,2,3],[4,5,6],[7,8,9]]
+assert s.findDiagonalOrder(m) == [1,2,4,7,5,3,6,8,9]
 
-mat = [[1,2],[3,4]]
-assert s.findDiagonalOrder(mat) == [1,2,3,4]
+m = [[1,2],[3,4]]
+assert s.findDiagonalOrder(m) == [1,2,3,4]
