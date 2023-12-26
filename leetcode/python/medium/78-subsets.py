@@ -14,15 +14,28 @@
 
 class Solution:
     def subsets(self, nums):
-        final = [[]]
-        for num in nums: 
-            result = []
-            for perm in final: 
-                copy = perm[:]
-                copy.append(num)
-                result.append(copy)
-            final.extend(result)
-        return final
+      # final = [[]]
+      # for num in nums: 
+      #     result = []
+      #     for perm in final: 
+      #         copy = perm[:]
+      #         copy.append(num)
+      #         result.append(copy)
+      #     final.extend(result)
+      # return final
+      # final = [[]]
+      # for num in nums:
+      #     final_copy = final[:] 
+      #     for ele in final:
+      #         final_copy.append([num] + ele)
+      #     final = final_copy   
+      # return final
+      final = [[]]
+      for num in nums: 
+        for i in range(len(final)):
+          curset = final[i]
+          final.append(curset[:] + [num])
+      return final
 
 s = Solution()
 
