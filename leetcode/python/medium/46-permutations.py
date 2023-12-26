@@ -14,18 +14,30 @@
 # Output: [[1]]
 
 class Solution:
+    # def permute(self, nums):
+    #     final = []
+    #     if len(nums) == 1: 
+    #         return [nums[:]]
+    #     for i in range(len(nums)):
+    #         n = nums.pop(0)
+    #         perms = self.permute(nums)
+    #         for perm in perms: 
+    #             perm.append(n)
+    #         final.extend(perms)
+    #         nums.append(n)
+    #     return final
     def permute(self, nums):
-        final = []
-        if len(nums) == 1: 
-            return [nums[:]]
-        for i in range(len(nums)):
-            n = nums.pop(0)
-            perms = self.permute(nums)
-            for perm in perms: 
-                perm.append(n)
-            final.extend(perms)
-            nums.append(n)
-        return final
+        def helper(current, left_over, answers):
+            if not len(left_over) and current: 
+                answers.append(current)
+            else: 
+                for i in range(0, len(left_over)):
+                    new_left_over = left_over[:i] + left_over[i + 1:]
+                    new_cur = current + [left_over[i]]
+                    helper(new_cur, new_left_over, answers) 
+        answers = []
+        helper([], nums, answers)
+        return answers
     
 s = Solution()
 
