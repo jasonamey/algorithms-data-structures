@@ -50,7 +50,6 @@ class Graph:
     def solution(self, s,e):
         visited = [False for _ in range(len(self.graph) + 1)]
         prev = [None for _ in range(len(self.graph) + 1)]
-       
         def bfs(node):
             q = []
             q.append(node)
