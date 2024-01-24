@@ -1,29 +1,37 @@
-####INCORRECT SO FAR###########
+# Given a string s, find the length of the longest substring
+#  without repeating characters.
 
-# def lengthOfLongestSubstring(s):
-#     characters = set()
-#     i = 0
-#     j = 0
-#     max = 1 if len(s) > 0 else 0
-#     while j < len(s) and i < len(s):
-#         char = s[j]
-#         if char not in characters:
-#             characters.add(char)
-#             tempMax = j - i + 1
-#             max = tempMax if tempMax > max else max
-#             j += 1
-#         else:
-#             if s[i] == char:
-#                 i += 1
-#             else :
-#                 if i < j:
-#                     while char != s[i]:
-#                         characters.remove(s[i])
-#                         i += 1
-#                 i += 1
-#                 else:
-#                     j += 1
-#     return max
+# Example 1:
+# Input: s = "abcabcbb"
+# Output: 3
 
+# Example 2:
+# Input: s = "bbbbb"
+# Output: 1
 
-print(lengthOfLongestSubstring("dvdf"))
+# Example 3:
+# Input: s = "pwwkew"
+# Output: 3
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+      i, j = 0, 0  
+      max = 0
+      chars = set()
+      while j < len(s):
+        if s[j] not in chars: 
+          chars.add(s[j])
+          if len(chars) > max: 
+            max = len(chars)
+          j += 1 
+        else: 
+          chars.remove(s[i])
+          i += 1 
+      return max
+    
+s = Solution()
+            
+assert s.lengthOfLongestSubstring("abcabcbb") == 3
+assert s.lengthOfLongestSubstring("bbbbb") == 1
+assert s.lengthOfLongestSubstring("pwwkew") == 3
+assert s.lengthOfLongestSubstring("dvdf") == 3
