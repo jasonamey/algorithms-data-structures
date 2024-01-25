@@ -49,17 +49,23 @@ class Trie:
                 return count 
         return count
 
-t = Trie()
-t.insert("apple")
-assert t.search("apple") == True  
-assert t.search("app") == False  
-assert t.startsWith("app") == True        
-t.insert("app")
-assert t.search("app") == True 
-assert t.commonPrefix() == "app"
+if __name__ == "__main__":
+    t = Trie()
 
-t_2 = Trie()
-a = ["flower","flow","flight"]
-for word in a: 
-    t_2.insert(word)
-print(t_2.commonPrefix())
+    t.insert("apple")
+    assert t.search("apple") == True  
+    assert t.search("app") == False  
+    assert t.startsWith("app") == True 
+
+    t.insert("app")
+    assert t.search("app") == True 
+    assert t.commonPrefix() == "app"
+
+    #
+    
+    t_2 = Trie()
+
+    a = ["flower","flow","flight"]
+    for word in a: 
+        t_2.insert(word)
+    assert t_2.commonPrefix() == "fl"
