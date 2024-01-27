@@ -1,5 +1,6 @@
 class UnionFind: 
-  def __init__(self, size): 
+  def __init__(self, size):
+    self.size = size 
     self.nodes = [-1 for _ in range(size)]
     self.heights = [1 for _ in range(size)]
 
@@ -15,6 +16,9 @@ class UnionFind:
   
   def connected(self, n1, n2): 
     return self.find(n1) == self.find(n2)
+  
+  def all_connected(self): 
+    return self.size in self.heights
 
   def find(self, n):
     if self.nodes[n] == -1: 
@@ -24,10 +28,12 @@ class UnionFind:
     return self.nodes[n]
   
 if __name__ == "__main__":
-  u = UnionFind(10)
+  u = UnionFind(6)
   u.union(0, 1)
+  u.union(1,2)
   u.union(2, 3)
   u.union(3,4)
   u.union(4,5)
+
   
   

@@ -17,10 +17,14 @@ class EdgeWeight:
   
   def get_weight(self):
     return self.weight
+  
+  def __lt__(self, other):
+    return self.weight < other.weight
 
 class EdgeWeightGraph: 
   def __init__(self, size):
     self.edges = [[] for _ in range(size) ]
+    self.size = size
   
   def __str__(self):
     str_edges = ""
