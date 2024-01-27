@@ -21,7 +21,6 @@ class Kruskals:
         collection.add(copy)
     pq = [EdgeWeight(*item) for item in collection]
     heapq.heapify(pq)
-    print(pq)
     return pq
   
   @staticmethod
@@ -35,11 +34,10 @@ class Kruskals:
     return ans
 
 if __name__ == "__main__":
-  
+  #python3 Kruskals.py < data/ewg_three.txt
   input_string = sys.stdin.read()
   ewg = create_edge_weight_graph(input_string)
   k = Kruskals(ewg)
-  for i in k.answer:
-    print(i)
+  assert len(k.answer) == ewg.size - 1
 
   
