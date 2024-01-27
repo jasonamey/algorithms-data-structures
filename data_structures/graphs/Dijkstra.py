@@ -34,6 +34,7 @@ class Dijkstra:
     distances[self.v] = 0
     q = [self.v]
     while q:
+      #refactor for priority queue
       w = q.pop(0)
       self.visited[w] = True
       for edges in self.edges[w]:

@@ -33,7 +33,9 @@ if __name__ == "__main__":
   u.union(1,2)
   u.union(2, 3)
   u.union(3,4)
+  assert u.all_connected() == False
   u.union(4,5)
+  assert u.all_connected() == True
 
   
   
