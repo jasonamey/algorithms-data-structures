@@ -28,7 +28,7 @@ class BreadthFirstPaths:
       distance += 1
 
 if __name__ == "__main__":
-  #python3 BreadthFirstPaths.py < graph_one.txt
+  #python3 BreadthFirstPaths.py < data/graph_one.txt
   input_string = sys.stdin.read()
   graph = create_graph(input_string)
   bfp = BreadthFirstPaths(graph, 0)

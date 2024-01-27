@@ -14,15 +14,14 @@ class Path:
         self.v = v
         self.visited = [False for _ in range(len(graph.adj))]
         self.paths = self.get_paths()
-        
-    
+          
     def dfs(self, v, paths):
         self.visited[v] = True
         for w in self.graph.adj[v]:
             if not self.visited[w]: 
                 self.dfs(w, paths)
                 paths[w] = v
-    
+
     def get_paths(self):
         paths = [None for i in range(len(graph.adj))]
         paths[self.v] = -1
@@ -54,7 +53,7 @@ def create_graph(input):
     return graph
 
 if __name__ == "__main__": 
-  #python3 Graph.py < graph_one.txt
+  #python3 Graph.py < data/graph_one.txt
   input_string = sys.stdin.read()
   graph = create_graph(input_string)
   path = Path(graph, 8)

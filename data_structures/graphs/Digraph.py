@@ -13,7 +13,6 @@ class Path:
         self.v = v
         self.visited = [False for _ in range(len(graph.adj))]
         self.paths = self.get_paths()
-        
     
     def dfs(self, v, paths):
         self.visited[v] = True

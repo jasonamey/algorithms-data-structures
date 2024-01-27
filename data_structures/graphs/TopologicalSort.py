@@ -19,10 +19,10 @@ class TopologicalSort:
       if not self.visited[v]:
         self.dfs(v)
         self.stack.append(v)
-    print(list(reversed(self.stack)))
+    return list(reversed(self.stack))
 
 if __name__ == "__main__":
-  #python3 TopologicalSearch.py < graph_one.txt
+  #python3 TopologicalSearch.py < data/graph_one.txt
   input_string = sys.stdin.read()
   graph = create_graph(input_string)
   t_sort = TopologicalSort(graph)
