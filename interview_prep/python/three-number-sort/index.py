@@ -16,11 +16,9 @@ def threeNumberSort(array, order):
             l -= 1
     return array
 
-
 def swap(i, j, arr):
     temp = arr[i]
     arr[i] = arr[j]
     arr[j] = temp
-
 
 # print(threeNumberSort([1, 0, -1, 1, 1, 0, 0, 0, -1], [1, 0, -1]))

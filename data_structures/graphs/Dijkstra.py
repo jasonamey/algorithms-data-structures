@@ -19,7 +19,15 @@ class Dijkstra:
     self.edges = graph.edges
     self.v = v
     self.distances = self.solve()
-
+  
+  def __str__(self):
+    answer = ""
+    for i, distance in enumerate(self.distances):
+      if i == 0:
+        continue
+      answer += f"distance from {self.v} to {i} is {distance}\n"
+    return answer.strip()
+    
   def solve(self):
     self.visited = [False for _ in range(len(self.edges))]
     distances = [float("inf") for _ in range(len(graph.edges))]
@@ -38,8 +46,9 @@ class Dijkstra:
     return distances
       
 if __name__ == "__main__":
+  #python3 Dijkstra.py < data/ewg.txt
   input_string = sys.stdin.read()
   edges = process_input_for_edges(input_string)
   graph = EWGGraph(edges)
   d = Dijkstra(graph, 0)
-  print(d.distances)
+  print(d)

@@ -1,5 +1,5 @@
 import sys
-import copy 
+
 class EdgeWeight:
   def __init__(self, v, w, weight):
     self.v = v
@@ -50,21 +50,6 @@ def create_edge_weight_graph(input):
     ewg.add_edge(*edge)
   return ewg
 
-class Kruskals: 
-  def __init__(self, edge_weighted_graph):
-    self.ewg = self.process_ewg(edge_weighted_graph)
-  
-  def process_ewg(self, ewg):
-    clean_edges = []
-    for i in range(len(ewg.edges)):
-      for edge in ewg.edges[i]: 
-        if edge.get_v() < edge.get_w():
-          clean_edges.append(copy.copy(edge))
-    return sorted(clean_edges, key=lambda x: x.weight)
-   
 if __name__ == "__main__":
   graph_input = sys.stdin.read()
   edge_weight_graph = create_edge_weight_graph(graph_input)
-  kruskals = Kruskals(edge_weight_graph)
-  for edge in kruskals.ewg: 
-    print(edge)

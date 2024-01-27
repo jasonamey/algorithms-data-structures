@@ -73,7 +73,7 @@ class Graph:
       vertexes.update([edge.v, edge.w])
     return len(vertexes)
 
-def create_graph(input,num): 
+def create_graph(input): 
   raw_input = input.split("\n")
   data = []
   for item in raw_input:
@@ -82,8 +82,9 @@ def create_graph(input,num):
   return graph
 
 if __name__ == "__main__":
+  #python3 Prims.py < data/ewg_prims.txt
   input_string = sys.stdin.read().strip()
-  graph = create_graph(input_string, 1)
+  graph = create_graph(input_string)
   prims = Prims(graph, 0)
   assert len(prims.tree) == graph.size - 1
 
