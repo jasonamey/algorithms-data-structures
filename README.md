@@ -8,4 +8,4 @@ Sources:
 
 2. "interview prep" i.e. [AlgoExpert](https://www.algoexpert.io/questions) 
 
-3. Sedgewick's [Algorithms 4th Edition](https://algs4.cs.princeton.edu/home/) (solutions in Python)
+3. Data Structure Implementations
