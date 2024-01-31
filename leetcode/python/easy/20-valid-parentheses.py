@@ -22,7 +22,6 @@ class Solution:
                 if not len(stack):
                     return False
                 test = stack.pop()
-                print
                 if close.find(ch) != open.find(test):
                     return False
         return len(stack) == 0
