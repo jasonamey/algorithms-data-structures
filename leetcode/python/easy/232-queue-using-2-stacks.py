@@ -11,7 +11,6 @@ class MyQueue:
         while self.s2:
             self.s1.append(self.s2.pop())
       
-        
     def pop(self) -> int:
         if self.s1:
             return self.s1.pop()
@@ -20,7 +19,6 @@ class MyQueue:
   
     def peek(self) -> int:
         return self.s1[-1]
-     
             
     def empty(self) -> bool:
         return len(self.s1) == 0
