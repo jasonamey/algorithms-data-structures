@@ -25,7 +25,7 @@ class MyQueue:
   
     def __str__(self):
         return f"{self.s1}"
-    
+ 
 queue = MyQueue()
 queue.push(1)
 assert queue.peek() == 1
@@ -39,5 +39,3 @@ assert queue.pop() == 2
 assert queue.pop() == 3
 assert queue.pop() == 4
 assert queue.empty() == True
-
-        

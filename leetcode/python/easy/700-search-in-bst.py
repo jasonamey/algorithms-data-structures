@@ -15,4 +15,5 @@ class Solution:
         else:
             if (root.right and val > root.val): 
                 return self.searchBST(root.right, val)
+        return None
 

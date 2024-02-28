@@ -41,6 +41,13 @@ class MyCircularQueue:
         
     def getBack(self): 
         return (self.front + self.size) % len(self.q)
-
+    
     def __str__(self):
         return f"{self.q}"
+    
+    def __lt__(self, other):
+        if len(self.q) < len(other.q):
+            return True 
+        else: 
+            return False 
+        
